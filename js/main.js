@@ -52,5 +52,23 @@ const teamMembers = [
   },
 ];
 
+// MILESTONE 1:
+// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+// console.log(teamMembers);
+for (attributo. in teamMembers) {
+  console.log(attributo + " : " + teamMembers[attributo]);
+}
 console.log(teamMembers);
-// console.log(teamMembers[0].role);
+// MILESTONE 2:
+// Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+const palla = {
+  cmDiametro: 30,
+  colore: "arancione",
+  prezzo: 3.0,
+  nuovo: true,
+  marca: "supersantos",
+};
+for (proprieta in palla) {
+  //   console.log(proprieta + ":" + palla[proprieta]);
+}
