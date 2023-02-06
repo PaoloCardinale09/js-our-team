@@ -18,6 +18,7 @@
 // Scott Estrada		Developer				scott-estrada-developer.jpg
 // Barbara Ramos		Graphic Designer		barbara-ramos-graphic-designer.jpg
 
+const containerCardsEl = document.getElementById("container-cards");
 // Creare l’array di oggetti con le informazioni fornite.
 const teamMembers = [
   {
@@ -55,20 +56,30 @@ const teamMembers = [
 // MILESTONE 1:
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 // console.log(teamMembers);
-for (attributo in teamMembers) {
-  console.log(attributo + " : " + teamMembers[attributo]);
+for (oggetto of teamMembers) {
+  for (attributo in oggetto) {
+    console.log(attributo + " : " + oggetto[attributo]);
+    // containerCardsEl.innerHTML = attributo + " : " + oggetto[attributo];
+  }
 }
-console.log(teamMembers);
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 
-const palla = {
-  cmDiametro: 30,
-  colore: "arancione",
-  prezzo: 3.0,
-  nuovo: true,
-  marca: "supersantos",
-};
-for (proprieta in palla) {
-  //   console.log(proprieta + ":" + palla[proprieta]);
+for (teamMember of teamMembers) {
+  containerCardsEl.innerHTML += `
+    <div class="card col-4" style="width: 18rem">
+    <img
+    src="./img/${teamMember.picture}"
+    class="card-img-top"
+    alt="..."
+    />
+    <div class="card-body">
+    <h5 class="card-title">${teamMember.name}</h5>
+    <p class="card-text">${teamMember.role}</p>
+    </div>
+    </div>`;
+  //   console.log(teamMember);
 }
+
+// MILESTONE 2:
+// Stampare le stesse informazioni su DOM sottoforma di stringhe
