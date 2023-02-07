@@ -59,11 +59,11 @@ const teamMembers = [
 for (oggetto of teamMembers) {
   for (attributo in oggetto) {
     console.log(attributo + " : " + oggetto[attributo]);
-    // containerCardsEl.innerHTML = attributo + " : " + oggetto[attributo];
+    // MILESTONE 2:
+    // Stampare le stesse informazioni su DOM sottoforma di stringhe
+    // containerCardsEl.innerHTML += `${attributo}  :  ${oggetto[attributo]} <br>`;
   }
 }
-// MILESTONE 2:
-// Stampare le stesse informazioni su DOM sottoforma di stringhe
 
 for (teamMember of teamMembers) {
   containerCardsEl.innerHTML += `
